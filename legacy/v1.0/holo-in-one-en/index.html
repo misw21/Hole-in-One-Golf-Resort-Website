@@ -1,0 +1,536 @@
+<!-- 
+==================================================
+Golf Resort Website Project - Student Guide
+==================================================
+1. This is a basic HTML file for a golf resort website
+2. Code is organized with clear comments
+3. You can change colors and fonts in the CSS file
+4. Website supports both English and Arabic languages
+================================================== 
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- 
+    ================================================== 
+    Document Meta Tags
+    ================================================== 
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Hole in One Resort - A luxurious golf experience with three world-class courses and comprehensive services.">
+    <meta name="keywords" content="golf, resort, Hole in One, golf courses, golf training, luxury accommodation">
+    <meta name="author" content="Hole in One Resort">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#191a23">
+
+    <title>Hole in One Resort | Exceptional Golf Experience</title>
+
+    <!-- 
+    ================================================== 
+    Stylesheets
+    ================================================== 
+    -->
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><defs><linearGradient id='a' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23B9FF66'/><stop offset='100%' style='stop-color:%234CAF50'/></linearGradient></defs><circle cx='256' cy='256' r='256' fill='%23191a23'/><g transform='translate(128 128)'><circle cx='128' cy='128' r='120' fill='white'/><path fill='url(%23a)' d='M128 8c66.274 0 120 53.726 120 120s-53.726 120-120 120S8 194.274 8 128 61.726 8 128 8zm0 20c-55.228 0-100 44.772-100 100s44.772 100 100 100 100-44.772 100-100-44.772-100-100-100zm30 50c0 16.569-13.431 30-30 30-16.569 0-30-13.431-30-30 0-16.569 13.431-30 30-30 16.569 0 30 13.431 30 30z'/><path fill='%23191a23' d='M158 78c0 16.569-13.431 30-30 30-16.569 0-30-13.431-30-30 0-16.569 13.431-30 30-30 16.569 0 30 13.431 30 30z' opacity='.15'/></g></svg>"
+        type="image/svg+xml">
+
+    <!-- For iOS devices -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><defs><linearGradient id='a' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23B9FF66'/><stop offset='100%' style='stop-color:%234CAF50'/></linearGradient></defs><circle cx='90' cy='90' r='90' fill='%23191a23'/><g transform='translate(45 45)'><circle cx='45' cy='45' r='42' fill='white'/><path fill='url(%23a)' d='M45 3c23.196 0 42 18.804 42 42S68.196 87 45 87 3 68.196 3 45 21.804 3 45 3zm0 7c-19.33 0-35 15.67-35 35s15.67 35 35 35 35-15.67 35-35-15.67-35-35-35zm10.5 17.5c0 5.799-4.701 10.5-10.5 10.5-5.799 0-10.5-4.701-10.5-10.5 0-5.799 4.701-10.5 10.5-10.5 5.799 0 10.5 4.701 10.5 10.5z'/><path fill='%23191a23' d='M55.5 27.5c0 5.799-4.701 10.5-10.5 10.5-5.799 0-10.5-4.701-10.5-10.5 0-5.799 4.701-10.5 10.5-10.5 5.799 0 10.5 4.701 10.5 10.5z' opacity='.15'/></g></svg>">
+
+    <!-- For Android Chrome -->
+    <meta name="theme-color" content="#191a23">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Third-Party CSS Libraries -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- AOS Animation Library -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"> -->
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Include Color Thief Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+
+    <!-- Preconnect to Important Resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Load Essential Libraries Only -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+</head>
+
+<body data-scroll-container data-theme="light">
+    <!-- 
+    ================================================== 
+    Main Content
+    ================================================== 
+    -->
+    <div class="landing-page">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <div class="logo-container">
+
+                    <span class="logo-text" data-translate="logo-text">Hole in One</span>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars menu-icon"></i>
+                <i class="fas fa-times close-icon"></i>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="gallery.html">Photo Gallery</a></li>
+                <li><a href="packages.html">Special Packages</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li class="lang-switch">
+                    <button class="lang-btn" aria-label="Switch Language">
+                        <i class="fas fa-globe"></i>
+                        <span>العربية</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="header">
+            <div class="header-content">
+                <h1 id="typed-text" data-translate="hero-title">Portugal's Leading Golf Resort</h1>
+                <p class="subtitle" data-translate="hero-subtitle">
+                    Discover a world of luxury at our exclusive golf resort, featuring three world-class golf courses,
+                    including the renowned "Sea View" course. Enjoy a variety of packages and comprehensive services,
+                    from luxurious accommodations to professional training, for an unforgettable experience.
+                </p>
+            </div>
+            <div class="header-image">
+                <img loading="lazy" data-src="./assets/images/hero-image.png" width="800" height="600"
+                    alt="Hole in One Golf Resort" class="lazy">
+            </div>
+        </header>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <!-- Decorative Elements -->
+        <div class="shapes-container">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+
+        <div class="container">
+            <div class="about-content">
+                <div class="section-header">
+                    <h2 data-translate="about-title">About Us</h2>
+                </div>
+                <p class="about-description" data-translate="about-description">
+                    At Hole in One Resort, we take pride in delivering an exceptional golfing experience since 1995. Our
+                    rich heritage spans over 25 years of excellence in the world of golf.
+                </p>
+
+                <!-- Feature Cards -->
+                <div class="features-grid">
+                    <div class="feature-card" data-tilt>
+                        <div class="feature-icon">
+                            <i class="fas fa-golf-ball"></i>
+                        </div>
+                        <h4>3 World-Class Courses</h4>
+                    </div>
+
+                    <div class="feature-card" data-tilt>
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>25+ Years Experience</h4>
+                    </div>
+
+                    <div class="feature-card" data-tilt>
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>50+ Professional Trainers</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <!-- Background Decorations -->
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Premium Services</span>
+                <h2>Facilities & Services</h2>
+                <p class="subtitle">We offer a comprehensive suite of world-class facilities and services to ensure an
+                    exceptional golfing experience</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Golf Courses -->
+                <div class="service-card" data-tilt>
+                    <div class="card-content">
+                        <h3>Golf Courses</h3>
+                        <ul class="features-list">
+                            <li>Three World-Class Golf Courses</li>
+                            <li>The Famous "Sea View" Course</li>
+                            <li>Stunning Natural Landscapes</li>
+                        </ul>
+                        <div class="button-group">
+                            <a href="https://wa.me/201234567890?text=Inquiry about golf courses"
+                                class="cta-button whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Book a Tee Time
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Academy -->
+                <div class="service-card featured" data-tilt>
+                    <div class="card-content">
+                        <div class="featured-badge">Most Popular</div>
+                        <h3>Training Academy</h3>
+                        <ul class="features-list">
+                            <li>Internationally Certified Trainers</li>
+                            <li>Advanced Training Technology</li>
+                            <li>Customized Training Programs</li>
+                        </ul>
+                        <div class="button-group">
+                            <a href="https://wa.me/201234567890?text=Inquiry about training programs"
+                                class="cta-button whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Book Training
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Luxury Accommodation -->
+                <div class="service-card" data-tilt>
+                    <div class="card-content">
+                        <h3>Luxury Accommodation</h3>
+                        <ul class="features-list">
+                            <li>Luxurious Rooms & Suites</li>
+                            <li>Course View Accommodations</li>
+                            <li>5-Star Hotel Services</li>
+                        </ul>
+                        <div class="button-group">
+                            <a href="https://wa.me/201234567890?text=Inquiry about accommodation"
+                                class="cta-button whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Book Stay
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Shop -->
+                <div class="service-card" data-tilt>
+                    <div class="card-content">
+                        <h3>Pro Shop</h3>
+                        <ul class="features-list">
+                            <li>Professional Golf Equipment</li>
+                            <li>Apparel & Accessories</li>
+                            <li>Personal Shopping Assistance</li>
+                        </ul>
+                        <div class="button-group">
+                            <a href="https://wa.me/201234567890?text=Inquiry about pro shop" class="cta-button whatsapp"
+                                target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Inquire Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Photo Gallery</span>
+                <h2>Explore Our Resort</h2>
+                <p class="subtitle">Take a visual tour and discover our world-class facilities and golf courses.</p>
+            </div>
+
+            <!-- Simple Grid Gallery -->
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./assets/images/gallery/golf-1.jpg" alt="Sea View Golf Course">
+                    <div class="gallery-overlay">
+                        <h3>Sea View Golf Course</h3>
+                        <p>One of the most scenic golf courses with breathtaking ocean views.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/images/gallery/golf-2.jpg" alt="Oasis Golf Course">
+                    <div class="gallery-overlay">
+                        <h3>Oasis Golf Course</h3>
+                        <p>A world-class golf course set amidst stunning natural landscapes.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/images/gallery/academy.jpg" alt="Training Academy">
+                    <div class="gallery-overlay">
+                        <h3>Training Academy</h3>
+                        <p>A fully equipped training center featuring the latest technology.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/images/gallery/hotel.jpg" alt="Luxury Accommodation">
+                    <div class="gallery-overlay">
+                        <h3>Luxury Accommodation</h3>
+                        <p>Elegant rooms and suites with stunning golf course views.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-footer">
+                <a href="gallery.html" class="read-more-btn">
+                    <span>View More Photos</span>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages-section">
+
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Premium Packages</span>
+                <h2>Specialized Packages</h2>
+                <p class="subtitle">Choose the perfect package for an unforgettable golf experience</p>
+            </div>
+
+            <div class="packages-grid">
+                <!-- Standard Package -->
+                <div class="package-card" data-tilt>
+                    <div class="package-header">
+                        <h3>Basic Package</h3>
+                    </div>
+                    <ul class="package-features">
+                        <li>Five rounds</li>
+                        <li>Full board stay for five nights in a luxury suite</li>
+                        <li>Five rounds - 18 holes</li>
+                        <li>One guaranteed round at the famous "Sea View" course</li>
+                        <li>Free digital training session</li>
+                    </ul>
+                </div>
+
+                <!-- Triple Tee Package -->
+                <div class="package-card featured" data-tilt>
+                    <div class="featured-tag">Most Popular</div>
+                    <div class="package-header">
+                        <h3>Triple Tee Package</h3>
+                    </div>
+                    <ul class="package-features">
+                        <li>Two-night stay in a double room with breakfast</li>
+                        <li>Three rounds - 18 holes</li>
+                        <li>One round at the famous "Sea View" course</li>
+                        <li>Free cart rental</li>
+                        <li>20% discount at the professional shop</li>
+                    </ul>
+                </div>
+
+                <!-- Relaxation Package -->
+                <div class="package-card" data-tilt>
+                    <div class="package-header">
+                        <h3>Relaxation Package</h3>
+                    </div>
+                    <ul class="package-features">
+                        <li>One-night stay with full breakfast</li>
+                        <li>Dinner at any of the resort's restaurants</li>
+                        <li>Access to the courts (fees apply, excluding "Sea View" course)</li>
+                        <li>Free club rental</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="packages-note">
+                <i class="fas fa-info-circle"></i>
+                <p>Customized packages are available for corporate events and extended stays. Clients should contact the
+                    company to arrange any customized packages.</p>
+            </div>
+            <div class="section-footer">
+                <a href="packages.html" class="read-more-btn">
+                    <span>View All Packages</span>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Contact Us</span>
+                <h2>Let's Discuss Your Needs</h2>
+                <p class="subtitle">We're here to answer your questions and provide the best solutions for you</p>
+            </div>
+
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="form-tabs">
+                        <button class="tab-btn active" data-tab="email">
+                            <i class="fas fa-envelope"></i>
+                            Email Us
+                        </button>
+                        <button class="tab-btn" data-tab="whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            Contact via WhatsApp
+                        </button>
+                    </div>
+
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-message"></i>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn email-btn">
+                                <span class="btn-text">Send via Email</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+
+                            <a href="#" class="submit-btn whatsapp-btn" style="display: none;">
+                                <span class="btn-text">Contact via WhatsApp</span>
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Main Footer -->
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+
+                        <span data-translate="logo-text">Hole In One</span>
+                    </a>
+                    <p class="footer-description" data-translate="footer-description">
+                        A world-class golf resort offering a unique experience with three professional courses and
+                        comprehensive services
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        © 2025 Hole In One. All rights reserved
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Go To Top Button -->
+    <button class="go-top-btn" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+        <div class="go-top-text">Back to top</div>
+    </button>
+
+    <!-- 
+    ================================================== 
+    Scripts
+    ================================================== 
+    -->
+    <!-- Core Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Smooth Scroll Library -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <!-- Animation & UI Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Additional Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.6.10/i18next.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/main.js" defer></script>
+
+</body>
+
+</html>

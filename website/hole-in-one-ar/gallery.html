@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="معرض صور منتجع هول إن ون - مجموعة متنوعة من الصور لملاعب الجولف والمرافق">
+    <meta name="keywords" content="معرض صور, منتجع هول إن ون, صور جولف, ملاعب جولف">
+
+    <title>معرض الصور | منتجع هول إن ون</title>
+
+    <!-- Stylesheets -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><defs><linearGradient id='a' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23B9FF66'/><stop offset='100%' style='stop-color:%234CAF50'/></linearGradient></defs><circle cx='256' cy='256' r='256' fill='%23191a23'/><g transform='translate(128 128)'><circle cx='128' cy='128' r='120' fill='white'/><path fill='url(%23a)' d='M128 8c66.274 0 120 53.726 120 120s-53.726 120-120 120S8 194.274 8 128 61.726 8 128 8zm0 20c-55.228 0-100 44.772-100 100s44.772 100 100 100 100-44.772 100-100-44.772-100-100-100zm30 50c0 16.569-13.431 30-30 30-16.569 0-30-13.431-30-30 0-16.569 13.431-30 30-30 16.569 0 30 13.431 30 30z'/><path fill='%23191a23' d='M158 78c0 16.569-13.431 30-30 30-16.569 0-30-13.431-30-30 0-16.569 13.431-30 30-30 16.569 0 30 13.431 30 30z' opacity='.15'/></g></svg>"
+        type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body data-scroll-container data-theme="light">
+    <!-- انشاء زر تحويل اللغة وجعله موجودا بالصفحة اثناء التحرك  -->
+    <div class="floating-lang-switch">
+        <button class="floating-lang-btn" aria-label="Switch Language">
+            <div class="lang-icon">
+                <i class="fas fa-globe"></i>
+            </div>
+            <div class="lang-text">
+                <span class="current">AR</span>
+                <span class="divider">/</span>
+                <span class="target">EN</span>
+            </div>
+        </button>
+    </div>
+
+    
+
+
+    <!-- تقسيم راس الصفحة تم شرحه في صفحة من نحن  -->
+    <nav class="navbar">
+        <!-- الشعار -->
+        <a href="index.html" class="logo">
+            <div class="logo-container">
+                <i class="fas fa-golf-ball"></i>
+                <span class="logo-text" data-translate="logo-text">هول إن ون</span>
+            </div>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="menu-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars menu-icon"></i>
+            <i class="fas fa-times close-icon"></i>
+        </div>
+
+        <!-- القائمة تم شرحها في صفحة من نحن  -->
+        <ul class="nav-links">
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="services.html">خدماتنا</a></li>
+            <li><a href="gallery.html" class="active">معرض الصور</a></li>
+            <li><a href="packages.html">الحزم المتخصصة</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+            <li class="lang-switch">
+                <button class="lang-btn" aria-label="Switch Language">
+                    <i class="fas fa-globe"></i>
+                    <span>English</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- قسم معرض الصور  -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="main-title">معرض الصور</h1>
+            <p class="subtitle">
+                استكشف جمال وفخامة منتجعنا من خلال مجموعة متنوعة من الصور
+            </p>
+        </div>
+    </header>
+
+    <!-- اقسام معرض الصور  -->
+    <section class="gallery-categories">
+        <div class="container">
+            <div class="categories-filter">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="golf-courses">ملاعب الجولف</button>
+                <button class="filter-btn" data-filter="accommodation">الإقامة</button>
+                <button class="filter-btn" data-filter="facilities">المرافق</button>
+                <button class="filter-btn" data-filter="activities">الأنشطة</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- استدعاء الامر grid لتقسم الشاشة من خلال الصور  -->
+                <!-- Golf Courses -->
+                <div class="gallery-item" data-category="golf-courses">
+                    <img src="./assets/images/gallery/golf-1.jpg" alt="ملعب سي فيو">
+                    <!-- يستخدم الامر overlay  لجعل ظهور الكتابة بالصورة اكثر انسيابية  -->
+                    <div class="item-overlay">
+                        <h3>ملعب سي فيو</h3>
+                        <p>ملعب مصمم على الطراز الحديث مع إطلالات بحرية خلابة</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="golf-courses">
+                    <img src="./assets/images/gallery/golf-2.jpg" alt="ملعب الواحة">
+                    <div class="item-overlay">
+                        <h3>ملعب الواحة</h3>
+                        <p>ملعب 18 حفرة محاط بالمناظر الطبيعية الخلابة</p>
+                    </div>
+                </div>
+
+                
+                <div class="gallery-item" data-category="accommodation">
+                    <img src="./assets/images/gallery/suite-1.jpg" alt="الجناح الملكي">
+                    <div class="item-overlay">
+                        <h3>الجناح الملكي</h3>
+                        <p>إقامة فاخرة مع إطلالة بانورامية على الملاعب</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="accommodation">
+                    <img src="./assets/images/gallery/room-1.jpg" alt="غرفة ديلوكس">
+                    <div class="item-overlay">
+                        <h3>غرفة ديلوكس</h3>
+                        <p>غرف عصرية مجهزة بأحدث وسائل الراحة</p>
+                    </div>
+                </div>
+
+                
+                <div class="gallery-item" data-category="facilities">
+                    <img src="./assets/images/gallery/restaurant.jpg" alt="المطعم الرئيسي">
+                    <div class="item-overlay">
+                        <h3>المطعم الرئيسي</h3>
+                        <p>تجربة طعام راقية مع إطلالة بانورامية</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="facilities">
+                    <img src="./assets/images/gallery/spa.jpg" alt="السبا">
+                    <div class="item-overlay">
+                        <h3>السبا</h3>
+                        <p>مركز متكامل للاسترخاء والعناية الشخصية</p>
+                    </div>
+                </div>
+
+                
+                <div class="gallery-item" data-category="activities">
+                    <img src="./assets/images/gallery/training.jpg" alt="التدريب">
+                    <div class="item-overlay">
+                        <h3>التدريب المتخصص</h3>
+                        <p>برامج تدريبية مع نخبة من المدربين المحترفين</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="activities">
+                    <img src="./assets/images/gallery/tournament.jpg" alt="البطولات">
+                    <div class="item-overlay">
+                        <h3>البطولات</h3>
+                        <p>استضافة البطولات المحلية والدولية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الجولة الافتراضية  -->
+    <section class="virtual-tour">
+        <div class="container">
+            <h2>جولة افتراضية 360°</h2>
+            <p class="subtitle">
+                استكشف مرافقنا وملاعبنا بتقنية التصوير ثلاثي الأبعاد
+            </p>
+            <div class="tour-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!4v1234567890!5m2!1sen!2s" width="100%" height="100%"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ذيل الصفحة  -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- الجزء الرئيسي من ذيل الصفحة  -->
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-golf-ball"></i>
+                        <span data-translate="logo-text">هول إن ون</span>
+                    </a>
+                    <p class="footer-description" data-translate="footer-description">
+                        منتجع جولف عالمي يقدم تجربة فريدة مع ثلاثة ملاعب احترافية وخدمات متكاملة
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="about.html">من نحن</a></li>
+                            <li><a href="services.html">خدماتنا</a></li>
+                            <li><a href="gallery.html">معرض الصور</a></li>
+                            <li><a href="packages.html">الحزم المتخصصة</a></li>
+                            <li><a href="contact.html">تواصل معنا</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>الخدمات</h3>
+                        <ul>
+                            <li><a href="#">ملاعب الجولف</a></li>
+                            <li><a href="#">التدريب المتخصص</a></li>
+                            <li><a href="#">الإقامة الفاخرة</a></li>
+                            <li><a href="#">المطاعم والمقاهي</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>تواصل معنا</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>البرتغال - منطقة الجولف السياحية</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+351 123 456 789</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@holeinone.com</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>النشرة البريدية</h3>
+                        <p>اشترك للحصول على آخر العروض والأخبار</p>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" placeholder="البريد الإلكتروني" required>
+                                <button type="submit" class="btn-subscribe">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- انشاء قسم اسف الصفحة للحقوق الملكية  -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        © 2025 هول إن ون. جميع الحقوق محفوظة
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر الانتقال الى اعلى الصفحة  -->
+    <button class="go-top-btn" aria-label="العودة إلى الأعلى">
+        <i class="fas fa-chevron-up"></i>
+        <div class="go-top-text">أعلى الصفحة</div>
+    </button>
+
+    <!-- ملفات الجافا سيكربت -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+        // Gallery Filter Functionality
+         
+        document.addEventListener('DOMContentLoaded', function () {
+        // يعبر هذا الكود ان الملفات الجافاا سيكربت سيتم فتحها عن تحميل صفحة الhtml 
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const filter = btn.dataset.filter;
+
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.dataset.category === filter) {
+                            item.style.display = 'block';
+                            item.style.animation = 'fadeIn 0.5s ease forwards';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        // Add fadeIn animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+
+</html>
